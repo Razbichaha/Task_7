@@ -10,6 +10,7 @@ namespace Task_7
             string plaersGoldToEnter = Console.ReadLine();
             int goldPlaer;
             int crystalPrice = 12;
+
             if(int.TryParse(plaersGoldToEnter, out goldPlaer))
             {
                 Console.WriteLine("Приветствую тебя авантюрист\nв нашем магазине ты можешь купить кристаллы\nцена одного кристала = " + crystalPrice + " золота");
@@ -18,8 +19,10 @@ namespace Task_7
                 int bayCrystals;
                 string enterPlaerCrystalsToStore = Console.ReadLine();
                 bool boughtCrystals = true ;
+
                 while (boughtCrystals)
                 {
+
                     if (int.TryParse(enterPlaerCrystalsToStore, out bayCrystals))
                     {
                         int theAmountOfGoldToBayCrystals = crystalPrice * bayCrystals;
@@ -32,7 +35,9 @@ namespace Task_7
                         Console.WriteLine("ММММ это не золото попробуйте ещё раз");
                         enterPlaerCrystalsToStore = Console.ReadLine();
                     }
+
                 }
+
                 Console.ReadLine();
             }
             else
