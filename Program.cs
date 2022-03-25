@@ -17,18 +17,15 @@ namespace Task_7
                 Console.WriteLine("Сколько кристаллов ты хочешь купить?");
                 int bayCrystals;
                 string enterPlaerCrystalsToStore = Console.ReadLine();
-                bool flag = true ;
-                while (flag)
+                bool boughtCrystals = true ;
+                while (boughtCrystals)
                 {
                     if (int.TryParse(enterPlaerCrystalsToStore, out bayCrystals))
                     {
-
                         int theAmountOfGoldToBayCrystals = crystalPrice * bayCrystals;
                         goldPlaer = goldPlaer - theAmountOfGoldToBayCrystals;
-                        //по заданию задачи проверки на достаточное колличество золота не нужно делать.Поэтому вот так.
                         Console.WriteLine("Куплено кристаллов - " + bayCrystals + ". Осталось золота - " + goldPlaer + ".");
-
-                        flag = false;
+                        boughtCrystals = false;
                     }
                     else
                     {
