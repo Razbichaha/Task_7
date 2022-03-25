@@ -22,7 +22,6 @@ namespace Task_7
 
                 while (boughtCrystals)
                 {
-
                     if (int.TryParse(enterPlaerCrystalsToStore, out bayCrystals))
                     {
                         int theAmountOfGoldToBayCrystals = crystalPrice * bayCrystals;
@@ -35,16 +34,13 @@ namespace Task_7
                         Console.WriteLine("ММММ это не золото попробуйте ещё раз");
                         enterPlaerCrystalsToStore = Console.ReadLine();
                     }
-
                 }
-
                 Console.ReadLine();
             }
             else
             {
                 Console.WriteLine("Введёные значения не являются числом\nприложение будет закрыто");
             }
-
         }
     }
 }
